@@ -1,4 +1,4 @@
-import { users, User,Role } from './data.js';
+import { users, User,Role } from '@/assets/js/data.js';
 
 /**
  * 
@@ -53,6 +53,7 @@ export function isAdmin() {
  */
 export function logout() {
     window.sessionStorage.clear();
+    window.location.reload();
 }
 
 globalThis.sessionUser = getSessionUser;

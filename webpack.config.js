@@ -1,6 +1,5 @@
 const path = require("path");
 const fs = require("fs");
-const publicDir = path.resolve(__dirname, "public");
 const srcDir = path.resolve(__dirname, "src");
 const pagesDir = path.resolve(__dirname, "src", "pages");
 const CopyWebPackPlugin = require("copy-webpack-plugin");
@@ -12,7 +11,8 @@ module.exports = {
   mode: "development",
   entry: {
     index: path.resolve(srcDir, "index.js"),
-    login: path.resolve(srcDir, "pages", "login-component", "login.js"),
+    login: path.resolve(srcDir, "pages", "login", "login.js"),
+    backend: path.resolve(srcDir, "pages", "backend", "back.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -32,9 +32,14 @@ module.exports = {
       chunks: ["index"], // 指定要插入到HTML文件中的JavaScript模块
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(srcDir, "pages", "login-component", "login.html"),
+      template: path.resolve(srcDir, "pages", "login", "login.html"),
       filename: "login.html",
       chunks: ["login"],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(srcDir, "pages", "backend", "back.html"),
+      filename: "back.html",
+      chunks: ["index","backend"],
     }),
     new MiniCssExtractPlugin(),
     new CopyWebPackPlugin({

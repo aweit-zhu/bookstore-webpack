@@ -1,4 +1,4 @@
-import { findAllBooks,findBookById,minusBookSotckByBookId } from '/src/js/book.js';
+import { findAllBooks,findBookById,minusBookSotckByBookId } from './book.js';
 
 export function addToCart(bookId) {
     

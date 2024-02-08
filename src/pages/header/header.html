@@ -1,0 +1,18 @@
+<header class="flex h-11 justify-center text-nowrap bg-white">
+    <div class="flex w-2/3 justify-between">
+      <div class="flex items-center justify-center">
+        <p class="btn-link" onclick="window.location.href='./index.html'"><i class="bi bi-house-door"></i>回首頁</p>
+        <p class="btn-link hidden" id="backBtn"><i class="bi bi-gear"></i>後台</p>
+      </div>
+      <div class="flex items-center justify-center">
+        <i class="bi bi-person text-green-600 text-lg"></i>
+        <button class="btn-link"><span id="username"></span> | </button>
+        <button class="btn-link" onclick="window.location.href='/src/order.html'">訂單查詢 |</button>
+        <button class="btn-link" onclick="window.location.href='/src/cart.html'">購物車 (<span id="cartItemsCtn"></span>) |</button>
+        <i class="bi bi-globe"></i>
+        <button class="btn-link">繁體 |</button>
+        <i class="bi bi-box-arrow-left"></i>
+        <button id="logout" class="btn-link">登出</button>
+      </div>
+    </div>
+</header>
