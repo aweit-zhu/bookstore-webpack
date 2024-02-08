@@ -76,7 +76,10 @@ module.exports = {
     ],
   },
   devServer: {
-    static: "./public",
+    static: {
+      directory: path.join(__dirname,'src', 'assets'),
+      publicPath: '/public',
+    },
   },
   stats: {
     modulesSpace: 999,

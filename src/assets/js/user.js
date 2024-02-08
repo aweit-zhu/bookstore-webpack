@@ -33,7 +33,9 @@ export function findUserByUsername(username) {
  */
 export function getSessionUser() {
     const userJsonStr = window.sessionStorage.getItem('user');
-    const currentUser = userJsonStr == null ? null: JSON.parse(userJsonStr);
+    if(userJsonStr == null)
+        return null;
+    const currentUser = JSON.parse(userJsonStr);
     return new User(currentUser.id,currentUser.username,currentUser.password,currentUser.email, 
        new Role( currentUser.role.roleId,  currentUser.role.roleName));
 }

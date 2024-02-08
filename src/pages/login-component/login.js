@@ -1,5 +1,6 @@
 import '@/styles.css';
-import { isValidUser } from '@/js/user.js';
+import './login.css';
+import { isValidUser } from '@/assets/js/user.js';
 
 $('form').submit(function (event) {
   event.preventDefault();

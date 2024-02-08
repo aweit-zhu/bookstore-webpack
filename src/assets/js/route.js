@@ -1,4 +1,4 @@
-import { getSessionUser,logout } from '/src/js/user.js';
+import { getSessionUser,logout } from './user.js';
 
 export function routeInterceptor() {
     

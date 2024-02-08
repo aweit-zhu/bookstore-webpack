@@ -73,14 +73,14 @@
 
     @font-face {
         font-family: 'NotoSansTC';
-        src: url('../fonts/Noto_Sans_TC/static/NotoSansTC-Regular.ttf') format('truetype');
+        src: url('./assets/fonts/Noto_Sans_TC/static/NotoSansTC-Regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'NotoSansTC';
-        src: url('../fonts/Noto_Sans_TC/static/NotoSansTC-Bold.ttf') format('truetype');
+        src: url('./assets/fonts/Noto_Sans_TC/static/NotoSansTC-Bold.ttf') format('truetype');
         font-weight: bold;
         font-style: normal;
     }
