@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>阿偉特書店-會員登入</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+
+<body>
+  <section class="section-success flex h-20 justify-center border-b-2 mt-8">
+    <img class="me-2 flex-shrink-0 rounded" src="/src/img/book.png" alt="" />
+    <p class="self-center text-nowrap text-lg">Aweit書店</p>
+    <div class="flex-auto"></div>
+  </section>
+  <section class="section-success h-auto w-1/2 justify-center">
+    <form action="./index.html" class="mx-auto p-2">
+      <input type="text" class="login-input" placeholder="帳號" name="username" value="admin" />
+      <input type="password" class="login-input" placeholder="密碼" name="password" value="admin" />
+      <input type="text" class="login-input" placeholder="請輸入驗證碼(不分大小寫)" />
+      <div class="my-2">
+        <img src="/src/img/captcha_login.png" alt="" class="inline-block" />
+        <a href="#">更新驗證碼</a>
+      </div>
+      <button type="submit" class="btn-success">登入</button>
+    </form>
+    <div class="my-2">
+      <a href="#">忘記帳號密碼</a> | 還不是會員? <a href="#">加入會員</a>
+    </div>
+    <p class="my-2">更多登入方式</p>
+    <button class="btn-primary my-2 flex justify-center">
+      <img src="/src/img/facebook.png" alt="" class="inline-block w-6 mx-2" />
+      使用Facebook登入
+    </button>
+    <button class="btn-success my-2 flex justify-center">
+      <img src="/src/img/line.png" alt="" class="inline-block w-6 mx-2" />
+      使用LINE登入
+    </button>
+  </section>
+  <footer>
+    阿偉特股份有限公司地址：XXX 台北市XXX76巷15弄18號<br>
+
+    Copyright © since 1995 books.com.tw All Rights Reserved.
+  </footer>
+</body>
+
+</html>
