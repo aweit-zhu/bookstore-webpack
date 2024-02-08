@@ -1,5 +1,5 @@
-import { orders, orderItems } from '/src/js/data.js';
-import { getSessionUser } from '/src/js/user.js';
+import { orders, orderItems } from '@/assets/js/data.js';
+import { getSessionUser } from '@/assets/js/user.js';
 
 export function findOrderByStatus(status) {
     return [...orders]

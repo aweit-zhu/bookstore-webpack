@@ -13,6 +13,9 @@ module.exports = {
     index: path.resolve(srcDir, "index.js"),
     login: path.resolve(srcDir, "pages", "login", "login.js"),
     backend: path.resolve(srcDir, "pages", "backend", "back.js"),
+    slide: path.resolve(srcDir,'assets', 'js', "slide.js"),
+    cart: path.resolve(srcDir, "pages", "cart", "cart.js"),
+    order: path.resolve(srcDir, "pages", "order", "order.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -29,7 +32,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(srcDir, "index.html"), // 指定index.html模板文件的路径
       filename: "index.html", // 指定生成的index.html文件名称
-      chunks: ["index"], // 指定要插入到HTML文件中的JavaScript模块
+      chunks: ["index","slide"], // 指定要插入到HTML文件中的JavaScript模块
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(srcDir, "pages", "login", "login.html"),
@@ -41,12 +44,23 @@ module.exports = {
       filename: "back.html",
       chunks: ["index","backend"],
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(srcDir, "pages", "cart", "cart.html"),
+      filename: "cart.html",
+      chunks: ["index","cart"],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(srcDir, "pages", "order", "order.html"),
+      filename: "order.html",
+      chunks: ["index","order"],
+    }),
     new MiniCssExtractPlugin(),
     new CopyWebPackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "public"),
-          filter: (resourcePath) => !resourcePath.endsWith(".html"),
+          from: path.resolve(__dirname, "src","templates"),
+          to: path.resolve(__dirname, "dist","templates"),
+          //filter: (resourcePath) => !resourcePath.endsWith(".html"),
         },
       ],
     }),

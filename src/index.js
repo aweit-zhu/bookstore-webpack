@@ -2,6 +2,7 @@ import '@/styles.css';
 import _ from 'lodash';
 import { routeInterceptor } from '@/assets/js/route.js'
 import header from '@/pages/header/header.html';
+import footer from '@/pages/footer/footer.html';
 
 console.log(process.env.NODE_ENV);
 
@@ -11,6 +12,12 @@ function addHeader() {
     const element = document.createElement('div');
     element.classList = 'sticky top-0 bg-white z-40';
     element.innerHTML = header;
+    return element;
+}
+
+function addFooter() {
+    const element = document.createElement('div');
+    element.innerHTML = footer;
     return element;
 }
 
@@ -35,3 +42,5 @@ import('@/pages/header/header.js').then(() => {
 }).catch(error => {
     console.error('Error executing header.js:', error);
 });
+
+document.body.append(addFooter());

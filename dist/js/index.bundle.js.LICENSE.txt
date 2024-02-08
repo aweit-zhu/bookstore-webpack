@@ -4,6 +4,8 @@
 
 /*! @/assets/js/route.js */
 
+/*! @/pages/footer/footer.html */
+
 /*! @/pages/header/header.html */
 
 /*! @/pages/header/header.js */
@@ -33,6 +35,10 @@
 /*!********************************!*\
   !*** ./src/assets/js/route.js ***!
   \********************************/
+
+/*!**************************************!*\
+  !*** ./src/pages/footer/footer.html ***!
+  \**************************************/
 
 /*!**************************************!*\
   !*** ./src/pages/header/header.html ***!

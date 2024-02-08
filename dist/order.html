@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂單查詢</title>
+<script defer src="js/index.bundle.js"></script><script defer src="js/order.bundle.js"></script><link href="index.css" rel="stylesheet"></head>
+
+<body class="overflow-auto" style="min-width: 600px;">
+
+    <section class="section w-2/3 mt-10">
+        <!-- 狀態頁籤 -->
+        <div class="flex h-12" id="status">
+            <button class="btn-success mx-1 w-20 self-end" data-id="0">全部</button>
+            <button class="btn-success bg-gray-400 mx-1 w-20 self-end" data-id="1">待出貨</button>
+            <button class="btn-success bg-gray-400 mx-1 w-20 self-end" data-id="2">已出貨</button>
+            <button class="btn-success bg-gray-400 mx-1 w-24 self-end text-nowrap" data-id="3">已到門市</button>
+        </div>
+        <!-- 訂單表格 -->
+        <table class="table-fixed my-8 mx-auto text-center mb-20">
+            <thead>
+                <tr>
+                    <th class="pb-4 text-nowrap w-72">訂單編號</th>
+                    <th class="pb-4 text-nowrap w-72">訂購時間</th>
+                    <th class="pb-4 text-nowrap w-20">訂單金額</th>
+                    <th class="pb-4 text-nowrap w-20">商品名稱</th>
+                    <th class="pb-4 text-nowrap w-40">數量</th>
+                    <th class="pb-4 text-nowrap w-20">處理狀態</th>
+                </tr>
+            </thead>
+            <tbody id="order">
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 跳出視窗-->
+    <div class="modal hidden overflow-auto">
+        <button class="modal-close bi bi-x-square" id="close"></button>
+        <table class="table-fixed my-8 mx-auto text-center mb-20">
+            <thead>
+                <tr>
+                    <th class="pb-4 text-nowrap w-20">商品圖片</th>
+                    <th class="pb-4 text-nowrap w-32">商品名稱</th>
+                    <th class="pb-4 text-nowrap w-20">單價</th>
+                    <th class="pb-4 text-nowrap w-20">數量</th>
+                    <th class="pb-4 text-nowrap w-20">商品總額</th>
+                    <th class="pb-4 text-nowrap w-40">處理狀態</th>
+                </tr>
+            </thead>
+            <tbody id="orderItem">
+            </tbody>
+        </table>
+    </div>
+    <div id="overlay"></div>
+</body>
+
+</html>
